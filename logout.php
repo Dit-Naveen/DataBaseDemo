@@ -1,0 +1,13 @@
+<?php
+    session_start();
+    if(isset($_COOKIE['user'])&&isset($_SESSION['user']))
+    {
+        unset($_COOKIE['user']);
+        unset($_SESSION['user']);
+        header('location:index.html');
+    }
+    else
+    {
+        header('location:index.html');
+    }
+?>
